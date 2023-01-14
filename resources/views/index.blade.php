@@ -106,7 +106,7 @@
 <div id="map"></div>
 
 <script src="{{ asset('assets/js/main.js') }}"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQLs1BjBeJ-FIvr_SZbIsCQlb75OFMlFs&libraries=places&callback=initAutocomplete" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&libraries=places&callback=initAutocomplete" async defer></script>
 </body>
 
 </html>
