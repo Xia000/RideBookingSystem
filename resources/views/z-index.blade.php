@@ -14,11 +14,14 @@
 <head>
     <title>Booking Taxi</title>
     <meta charset="utf-8">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
 
 </head>
@@ -62,11 +65,7 @@
                     <option value="3">3 Passenger</option>
                 </select>
             </div>
-            <div>
-                <b><label for="distance" id="add-input"></label></b>
-            </div>
             <button id="submit" type="submit" class="btn btn-primary">Booking</button>
-            <button id="reserve" class="btn btn-primary" onclick="reserv()" style="display: none">Book Now</button>
         </div>
         <!-- right col -->
         <div id="form" class="form-horizontal col-sm-4">
@@ -101,13 +100,12 @@
                 <b><label for="to-input">Total Price</label></b>
                 <label id="value-price" class="form-text">Press on the Booking button to calculate...</label>
             </div>
-
         </div>
     </div>
 </div>
-<div id="map" style="margin-top: 50px"></div>
+<div id="map"></div>
 
-<script src="{{ asset('assets/js/main.js') }}"></script>
+<script src="{{ asset('assets/js/z-main.js') }}"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQLs1BjBeJ-FIvr_SZbIsCQlb75OFMlFs&libraries=places&callback=initAutocomplete" async defer></script>
 </body>
 

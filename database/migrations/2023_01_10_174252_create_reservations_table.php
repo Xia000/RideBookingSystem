@@ -15,6 +15,17 @@ return new class extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->string('pickup_address');
+            $table->string('destination_address');
+            $table->date('pickup_date');
+            $table->time('pickup_time');
+            $table->double('distance', 8, 2);
+            $table->enum('status', ['scheduled', 'completed', 'cancelled']);
+            $table->string('ride_type');
+            $table->string('passenger');
+            $table->string('price');
+
             $table->timestamps();
         });
     }
